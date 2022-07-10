@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/callcocam/tall-schema.git",
-                "reference": "f9d557133bccbc09bad13ae5610090d6b43e357d"
+                "reference": "900d529bc00e0b6ebac7aa23d607a4e01c17e3ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/callcocam/tall-schema/zipball/f9d557133bccbc09bad13ae5610090d6b43e357d",
-                "reference": "f9d557133bccbc09bad13ae5610090d6b43e357d",
+                "url": "https://api.github.com/repos/callcocam/tall-schema/zipball/900d529bc00e0b6ebac7aa23d607a4e01c17e3ff",
+                "reference": "900d529bc00e0b6ebac7aa23d607a4e01c17e3ff",
                 "shasum": ""
             },
             "require": {
@@ -459,7 +459,7 @@
                 "issues": "https://github.com/callcocam/tall-schema/issues",
                 "source": "https://github.com/callcocam/tall-schema/tree/main"
             },
-            "time": "2022-07-09T20:56:46+00:00"
+            "time": "2022-07-10T03:06:52+00:00"
         },
         {
             "name": "callcocam/tall-sluggable",
