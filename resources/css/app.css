@@ -1,0 +1,202 @@
+
+.panelbox .modal-dialog {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.panelbox .modal-dialog .modal-content {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    padding-top: env(safe-area-inset-top);
+}
+
+.panelbox .modal-dialog .modal-content .modal-header {
+    border-bottom: 0;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+}
+
+.panelbox .modal-dialog .modal-content .modal-header .modal-title {
+    color: #27173E;
+}
+
+.panelbox .modal-dialog .modal-content .modal-body {
+    padding: 10px 16px;
+}
+
+.panelbox.show .modal-dialog {
+    transform: translate(0, 0) !important;
+}
+
+.panelbox-left .modal-dialog {
+    transform: translate(-100%, 0) !important;
+}
+
+.panelbox-right .modal-dialog {
+    transform: translate(100%, 0) !important;
+    left: auto;
+    right: 0;
+}
+
+.panelbox-left .listview > li,
+.panelbox-right .listview > li {
+    padding: 10px 16px;
+}
+
+.panelbox-left .link-listview > li,
+.panelbox-right .link-listview > li {
+    padding: 0;
+}
+
+.panelbox-left .link-listview > li a,
+.panelbox-right .link-listview > li a {
+    padding: 10px 36px 10px 16px;
+}
+
+.panelbox-left .image-listview > li,
+.panelbox-right .image-listview > li {
+    padding: 0;
+}
+
+.panelbox-left .image-listview > li .item,
+.panelbox-right .image-listview > li .item {
+    padding: 10px 16px;
+}
+
+.panelbox-left .image-listview > li a.item,
+.panelbox-right .image-listview > li a.item {
+    padding-right: 36px;
+}
+
+
+@media (min-width: 1000px)
+{
+    .panelbox .modal-dialog {
+        width: 75%;
+    }
+}
+
+
+
+.modalbox {
+    padding-top: env(safe-area-inset-top);
+    overflow-x: hidden;
+}
+
+.modalbox .modal-dialog {
+    -webkit-transform: translate(0, 100%) !important;
+    transform: translate(0, 100%) !important;
+    min-width: 100%;
+    margin: 0;
+    -webkit-transition: 0.5s all !important;
+    transition: 0.5s all !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: env(safe-area-inset-top);
+}
+
+.modalbox .modal-dialog .modal-content {
+    border-radius: 0;
+    border: 0;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 56px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.modalbox .modal-dialog .modal-content .modal-header {
+    border: 0;
+    min-height: 56px;
+    padding: 10px 16px;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #DCDCE9;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #FFF;
+}
+
+.modalbox .modal-dialog .modal-content .modal-header .modal-title {
+    margin: 0;
+    color: #27173E;
+    font-size: 17px;
+}
+
+.modalbox .modal-dialog .modal-content .modal-body {
+    padding: 20px 16px;
+    overflow: auto;
+}
+
+.modalbox.show .modal-dialog {
+    -webkit-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: rgba(39, 23, 62, 0.29);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#loader .loading-icon {
+    margin: calc(100vh - 50%) auto;
+    width: 42px;
+    height: auto;
+    -webkit-animation: loadingAnimation 1s infinite;
+    animation: loadingAnimation 1s infinite;
+}
+
+/* input,textarea, select{
+    text-transform: uppercase!important;
+} */
+* {-webkit-overflow-scrolling: touch;overflow-y:visible}
+::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #cccccc;        /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #435EBE;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 2px solid #1040de;  /* creates padding around scroll thumb */
+}

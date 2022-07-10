@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="c" width="500" height="500" style="border: 2px solid aqua;"></canvas>
+</body>
+<style>
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.22/fabric.js"></script>
+<script>
+    const button = document.querySelector('button');
+
+    function load() {
+        const canvas = new fabric.Canvas('c');
+        const rect = new fabric.Rect({
+            width: 50,
+            height: 50,
+            left: 10,
+            top: 10,
+            fill: 'yellow',
+            angle: -30,
+        });
+        const rect2 = new fabric.Rect({
+            width: 50,
+            height: 50,
+            left: 110,
+            top: 110,
+            fill: 'red',
+            angle: -30,
+        });
+
+        function objectAddedListener(ev) {
+            let target = ev.target;
+            console.log('left', target.left, 'top', target.top, 'width', target.width, 'height', target.height, target.angle);
+        }
+
+        function objectMovedListener(ev) {
+            let target = ev.target;
+            console.log('left', target.left, 'top', target.top, 'width', target.width * target.scaleX, 'height', target.height * target.scaleY);
+        }
+
+        canvas.on('object:added', objectAddedListener);
+        canvas.on('object:modified', objectMovedListener);
+
+        canvas.add(rect);
+        canvas.add(rect2);
+
+    }
+
+    load();
+
+    button.addEventListener('click', load);
+</script>
+
+</html>
